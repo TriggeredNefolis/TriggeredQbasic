@@ -1,0 +1,92 @@
+
+C PROGRAMS
+
+1. Add two numbers
+-----------------
+#include <stdio.h>
+
+int main() {
+    int a, b, sum;
+    scanf("%d%d", &a, &b);
+    sum = a + b;
+    printf("Sum = %d", sum);
+    return 0;
+}
+
+2. Check Odd or Even
+-------------------
+#include <stdio.h>
+
+int main() {
+    int n;
+    scanf("%d", &n);
+
+    if (n % 2 == 0)
+        printf("Even");
+    else
+        printf("Odd");
+
+    return 0;
+}
+
+3. Greater of two numbers
+------------------------
+#include <stdio.h>
+
+int main() {
+    int a, b;
+    scanf("%d%d", &a, &b);
+
+    if (a > b)
+        printf("%d is greater", a);
+    else if (b > a)
+        printf("%d is greater", b);
+    else
+        printf("Both are equal");
+
+    return 0;
+}
+
+
+QBASIC PROGRAMS
+
+1. Using SUB and FUNCTION
+------------------------
+DECLARE FUNCTION Add (A, B)
+DECLARE SUB Display (S)
+
+CLS
+INPUT "Enter first number: "; X
+INPUT "Enter second number: "; Y
+
+R = Add(X, Y)
+CALL Display(R)
+END
+
+FUNCTION Add (A, B)
+Add = A + B
+END FUNCTION
+
+SUB Display (S)
+PRINT "Sum = "; S
+END SUB
+
+
+2. File Handling with Looping
+-----------------------------
+CLS
+OPEN "STUDENT.DAT" FOR OUTPUT AS #1
+
+FOR I = 1 TO 5
+    INPUT "Enter name: "; N$
+    WRITE #1, N$
+NEXT I
+CLOSE #1
+
+OPEN "STUDENT.DAT" FOR INPUT AS #1
+DO WHILE NOT EOF(1)
+    INPUT #1, N$
+    PRINT N$
+LOOP
+CLOSE #1
+END
