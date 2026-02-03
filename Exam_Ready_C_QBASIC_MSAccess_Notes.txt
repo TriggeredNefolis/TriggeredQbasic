@@ -1,0 +1,154 @@
+
+===============================
+EXAM READY PROGRAMMING NOTES
+C, QBASIC, MODULAR PROGRAMMING,
+FILE HANDLING & MS ACCESS
+===============================
+
+--------------------------------
+SECTION 1: C PROGRAMS
+--------------------------------
+
+1. ADD TWO NUMBERS
+-----------------
+#include <stdio.h>
+
+int main() {
+    int a, b, sum;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    sum = a + b;
+    printf("Sum = %d", sum);
+    return 0;
+}
+
+2. CHECK ODD OR EVEN
+-------------------
+#include <stdio.h>
+
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n % 2 == 0)
+        printf("Even Number");
+    else
+        printf("Odd Number");
+
+    return 0;
+}
+
+--------------------------------
+SECTION 2: QBASIC MODULAR PROGRAMMING
+--------------------------------
+
+1. USING SUB AND FUNCTION (ADD TWO NUMBERS)
+------------------------------------------
+DECLARE FUNCTION Add (A, B)
+DECLARE SUB Display (S)
+
+CLS
+INPUT "Enter first number: "; X
+INPUT "Enter second number: "; Y
+
+R = Add(X, Y)
+CALL Display(R)
+END
+
+FUNCTION Add (A, B)
+Add = A + B
+END FUNCTION
+
+SUB Display (S)
+PRINT "Sum = "; S
+END SUB
+
+
+2. GREATER OF TWO NUMBERS (USING FUNCTION)
+-----------------------------------------
+DECLARE FUNCTION Greater (A, B)
+
+CLS
+INPUT "Enter first number: "; A
+INPUT "Enter second number: "; B
+
+G = Greater(A, B)
+PRINT "Greater Number = "; G
+END
+
+FUNCTION Greater (A, B)
+IF A > B THEN
+    Greater = A
+ELSE
+    Greater = B
+END IF
+END FUNCTION
+
+--------------------------------
+SECTION 3: QBASIC FILE HANDLING
+--------------------------------
+
+1. FILE HANDLING WITH LOOPING
+-----------------------------
+CLS
+OPEN "DATA.DAT" FOR OUTPUT AS #1
+
+FOR I = 1 TO 5
+    INPUT "Enter a name: "; N$
+    WRITE #1, N$
+NEXT I
+CLOSE #1
+
+OPEN "DATA.DAT" FOR INPUT AS #1
+PRINT "Stored Names:"
+DO WHILE NOT EOF(1)
+    INPUT #1, N$
+    PRINT N$
+LOOP
+CLOSE #1
+END
+
+--------------------------------
+SECTION 4: MS ACCESS (EXAM THEORY)
+--------------------------------
+
+WHAT IS MS ACCESS?
+------------------
+MS Access is a Database Management System (DBMS) used to store, manage and retrieve data easily.
+
+OBJECTS OF MS ACCESS:
+---------------------
+1. Table   - Stores data in rows and columns
+2. Query   - Retrieves specific data
+3. Form    - Used to enter and view data
+4. Report  - Used to print formatted data
+
+HOW TO CREATE A TABLE IN MS ACCESS:
+----------------------------------
+1. Open MS Access
+2. Click on Blank Database
+3. Go to Table Design
+4. Enter Field Name and Data Type
+5. Set Primary Key
+6. Save the table
+
+DATA TYPES IN MS ACCESS:
+-----------------------
+Text, Number, Date/Time, Currency, Yes/No
+
+PRIMARY KEY:
+------------
+A Primary Key uniquely identifies each record in a table.
+
+USES OF FORM:
+-------------
+Forms are used to enter, edit and view records easily.
+
+USES OF QUERY:
+--------------
+Queries are used to search, filter and sort records.
+
+--------------------------------
+END OF NOTES
+--------------------------------
